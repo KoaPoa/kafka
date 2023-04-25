@@ -18,6 +18,7 @@ func main() {
 	config.Producer.RequiredAcks = sarama.WaitForAll
 	config.Producer.Partitioner = sarama.NewHashPartitioner
 	config.Net.MaxOpenRequests = 1
+	fmt.Priltln(config)
 
 	sarama.Logger = log.New(os.Stdout, "[Sarama] ", log.LstdFlags)
 
